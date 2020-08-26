@@ -1835,6 +1835,11 @@ section {
 #footer .credits {
   float: right;
   font-size: 13px;
+  color: #0c3c53;
+}
+
+#footer .credits a{
+  color: #0c3c53;
 }
 
 #footer .credits a {
