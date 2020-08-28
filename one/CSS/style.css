@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* background-color: #24252A; */
+}
+:root{
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    /* font-family: Helvetica;  */
+    font-weight: 400;
+    background: #ecf0f1;
+    height: 100vh;
+}
+.container{
+    width: 100%;
+    /* height: 100%; */
+    /* margin: 10px auto; */
+    /* background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); */
+    /* background-color: #FF9A8B;
+    background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%); */
+    /* background-image: linear-gradient( 109.5deg,  rgba(76,221,242,1) 11.2%, rgba(92,121,255,1) 91.1% ); */
+    background: rgb(25,142,161);
+    background: url("../Images/pattern.png");
+    background-repeat: repeat;
+    background: -moz-linear-gradient(90deg, rgba(25,142,161,1) 0%, rgba(39,110,135,1) 34%, rgba(39,96,156,1) 70%, rgba(38,96,180,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(25,142,161,1) 0%, rgba(39,110,135,1) 34%, rgba(39,96,156,1) 70%, rgba(38,96,180,1) 100%);
+    background: linear-gradient(90deg, rgba(25,142,161,1) 0%, rgba(39,110,135,1) 34%, rgba(39,96,156,1) 70%, rgba(38,96,180,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#198ea1",endColorstr="#2660b4",GradientType=1);
+    
+    /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.carousel{
+    /* border: 2px solid #ccc; */
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.logo{
+    z-index: 1;
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    /* display: flex; */
+    text-align: center;
+    margin-top: 2rem;
+}
+.logo a{
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+}
+.logo i{
+    font-size: 2rem;
+}
+.logo h1{
+    font-size: 2rem;
+    display: inline;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.slider{
+    height: 100%;
+    display: flex;
+    width: 400%;
+    /* border: 1px solid red; */
+    transition: all 600ms ease;
+    /* transform: translate(-25%); */
+}
+/* .slider > section{
+    
+    flex-basis:100%;
+
+} */
+.controls > .arrow{
+    position: absolute;
+    top:50%;
+    cursor: pointer;
+    font-size: 3rem;
+    transform: translateY(-50%);
+}
+.controls > .left{
+    left:1rem;
+}
+.controls > .right{
+    right:1rem;
+}
+.controls > ul{
+    position: absolute;
+    top: 7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+.controls > ul >li{
+    margin: 0.5rem;
+    color: #333;
+    cursor: pointer;
+}
+.controls > ul >li:hover{
+    color: #FF6584;
+}
+.controls > ul >li.selected{
+    color: #ccc;
+    transition: all 600ms ease;
+}
+.one{
+    padding:16rem 10rem;
+    padding-bottom: 0;
+}
+/* .slider > .one {
+    display: flex;
+} */
+/* .slider > .one > .content{
+    flex: 50%;
+    z-index: 1;
+}
+.slider > .one > .graphic{
+    flex: 50%;
+} */
+.slider > .one > .content > .social-media{
+    padding-top: 2rem;
+}
+.slider > .one > .content > .social-media > a{
+    text-decoration: none;
+    color: #F5f5f5;
+    margin: 1rem;
+    font-size: 2rem;  
+    margin-left: 0;
+}
+.slider > .one > .content > .one-heading{
+    transition: all 3s ease;
+    color: white;
+    /* font-size: 5rem; */
+    /* width: 50%; */
+    font-family: 'lato', sans-serif;
+    text-transform: uppercase;
+    /* margin-left: 5rem; */
+    margin-right:auto;
+    /* -webkit-animation: tracking-in-expand 1.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-expand 1.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both; */
+}
+.slider > .one > .content > .one-description{
+    /* width: 75%; */
+    /* margin: 1rem auto; */
+    overflow: hidden; 
+    white-space: nowrap; 
+    /* border-right: .15em solid orange; */
+    /* font-size: 1.5rem; */
+    font-family: monospace;
+    color: whitesmoke;
+    /* letter-spacing: 0.4rem; */
+    /* animation: typing 3.5s steps(30, end), blinking-cursor .5s step-end infinite; */
+}
+.slider > .one > .content > a > .one-button{
+    /* margin-top: 5rem; */
+    background: transparent;
+    border: 1px solid white;
+    /* padding: 1.5%;
+    width: 30%; */
+    border-radius: 1rem;
+    color: white;
+    cursor: pointer;
+}
+.slider > .one > .content > a > .one-button:hover{
+    color: #333;
+    background: rgba(255,255,255,1);
+    transition: all 600ms ease;
+}
+.slider > .one > .graphic > .one-graphic{
+    /* z-index: -1; */
+    float: right;
+    /* right: -5rem; */
+    /* bottom: -15rem; */
+    margin-right:-20% ;
+    margin-top: -20%;
+    width: 200%;
+}
+/* .slider > .two{
+    padding: 16rem 10rem;
+} */
+/* .slider > .two > .content{
+    display: flex;
+} */
+.slider > .two > .content > .team{
+    flex: 50%;
+}
+.slider > .two > .content > .team > .two-heading{
+    color: white;
+    font-size: 5rem;
+    font-family: 'lato', sans-serif;
+}
+.slider > .two > .content > .team > .two-description{
+    color: whitesmoke;
+    font-family: monospace;
+    font-size: 1.2rem;
+}
+.slider > .two > .content > .team > .team-grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 16px;
+    margin-top: 2rem;
+}
+.slider > .two > .content > .team > .team-grid > .team-member{
+    width: 11rem;
+    height: 11rem;
+    transition: all 600ms ease 0s;
+    border-radius: 1rem;
+    background: white;
+    position: relative;
+}
+.slider > .two > .content > .team > .team-grid > .team-member:hover{
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12);
+    transition: all 600ms ease 0s;
+    transform: scale(1.1);
+}
+
+.slider > .two > .content > .team > .team-grid > .team-member > img{
+    width: 100%;
+    border-radius: 1rem;
+    transition: all 600ms ease 0s;
+}
+.slider > .two > .content > .team > .team-grid > .team-member:hover > img{
+    opacity: 0;
+    transition: all 600ms ease 0s;
+}
+.slider > .two > .content > .team > .team-grid > .team-member > .team-member-details{
+    opacity: 0;
+    position: absolute;
+    padding: 1rem;
+    top: 0;
+    transition: all 600ms ease;
+}
+.slider > .two > .content > .team > .team-grid > .team-member > .team-member-details > h1{
+    font-size: 100%;
+}
+.slider > .two > .content > .team > .team-grid > .team-member > .team-member-details > p{
+    color: #2675B4;
+    text-transform: uppercase;
+}
+.slider > .two > .content > .team > .team-grid > .team-member > .team-member-details > .social-media{
+    margin: 20% auto;
+}
+.slider > .two > .content > .team > .team-grid > .team-member > .team-member-details > .social-media > a{
+    text-decoration: none;
+    color: #333;
+    margin-right: 0.5rem;
+}
+.slider > .two > .content > .team > .team-grid > .team-member:hover > .team-member-details{
+    opacity: 1;
+    transition: all 600ms ease;
+}
+.slider > .two > .content > .graphic{
+    /* display: none; */
+    flex: 50%;
+}
+.slider > .two > .content > .graphic > .two-graphic{
+     float: right;
+     margin-right:-70% ;
+     margin-top: -20%;
+     width: 150%;   
+}
+.slider > .three > .content{
+    padding: 16rem 20rem;
+    /* padding-right:10rem ; */
+    /* text-align: center; */
+    /* width: 60%; */
+}
+.slider > .three > .content > .heading{
+    font-size: 5rem;
+    color: white;
+    font-family: 'lato', sans-serif;
+}
+.slider > .three > .content > .description{
+    /* width: 80%; */
+    color: whitesmoke;
+    /* margin-left: 10rem; */
+    font-size: 2rem;
+}
+/* Contact Section */
+.slider > .four{
+    padding-top: 13rem;
+    
+}
+.slider > .four > .contact-form-container{
+    /* padding: 3rem; */
+    /* background: white; */
+    /* border-radius: 1rem; */
+    /* height: 40rem; */
+    /* box-shadow: 0px 20px 20px 0px rgba(38, 117, 180, 0.072), 0px 20px 20px 0px rgba(38, 117, 180, 0.086), 0px 20px 80px 0px rgba(38, 117, 180, 0.12); */
+    display: flex;
+    width: 90%;
+}
+.slider > .four > .contact-form-container > .graphic{
+    flex:50%
+}
+.slider > .four > .contact-form-container > .graphic > img{
+    width: 100%;
+    margin: 0 auto;
+    /* transform: scaleX(-1); */
+}
+.slider > .four > .contact-form-container > .form{
+    flex: 50%;
+    text-align: center;
+}
+.slider > .four > .contact-form-container > .form > .heading{
+    font-size: 4rem;
+    font-family: 'Lato', sans-serif;
+    color: white;
+}
+.slider > .four > .contact-form-container > .form > form > input,textarea{
+    width: 90%;
+    padding: 1rem;
+    background: #F0F0F0;
+    border: none;
+    border-radius: 1rem;
+    margin-top:1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+.slider > .four > .contact-form-container > .form > form > input[type="submit"]{
+    background: #F50057;
+    color: white;
+    cursor: pointer;
+}
+
+@-webkit-keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 75% }
+}
+@keyframes blinking-cursor {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
+
+
+
+/*Small Screens*/
+@media only screen and (min-width: 300px) and (max-width:1100px){
+    .one{
+        padding: 11rem 2rem;
+        padding-bottom: 0;
+        width: 100vw;
+    }
+    .slider > .one > .content > .social-media{
+        padding-top: 2rem;
+        text-align: center;
+    }
+    .slider > .one > .content > .one-heading{
+        font-size: 4rem;
+        /* width: 100vw; */
+    }
+    .slider > .one > .content{
+        text-align: center;
+    }
+    .slider > .one > .content > .one-description{
+        font-size:1.1rem;
+        letter-spacing: normal;
+    }
+    .slider > .one > .content > a > .one-button{
+        width: 100%;
+        padding: 4.5%;
+        margin-top: 5rem;
+    }
+    .slider > .two{
+        padding: 11rem 2rem;
+        width: 100vw;
+    }
+    .slider > .two > .content > .team > .two-heading {
+        /* width: 100vw; */
+        font-size: 4rem;
+    }
+    .slider > .two > .content > .team > .two-description {
+        display: none;
+    }
+    .slider > .two > .content > .team > .team-grid {
+        width: 100%;
+        overflow-y: scroll;
+        /* margin-left: -1.8rem; */
+    }
+    .slider > .three{
+        width: 100vw;
+    }
+    .slider > .three > .content {
+        padding: 11rem 2rem;
+        text-align: center;
+    }
+    .slider > .three > .content > .description{
+        font-size: 1.4rem;
+    }
+    .slider > .four {
+        padding: 13rem 2rem;
+        overflow-y: auto;
+    }
+    .slider > .four > .contact-form-container {
+        width: 100%;
+    }
+    .slider > .four > .contact-form-container > .graphic{
+        display: none;
+    }
+}
+
+/* Large Screens */
+@media only screen and (min-width:1100px){
+    .one{
+        padding:16rem 10rem;
+        padding-bottom: 0;
+    }
+    .slider > section{
+        flex-basis:100%;
+    }
+    .slider > .one {
+        display: flex;
+    }
+    .slider > .one > .content{
+        flex: 50%;
+        z-index: 1;
+    }
+    .slider > .one > .graphic{
+        flex: 50%;
+    }
+    .slider > .one > .content > .one-heading{
+        font-size: 5rem;
+        -webkit-animation: tracking-in-expand 1.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        animation: tracking-in-expand 1.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    }
+    .slider > .one > .content > .one-description{
+        /* font-size:1.2rem; */
+        width: 75%;
+        font-size: 1.5rem;
+        letter-spacing: 0.4rem;
+        animation: typing 3.5s steps(30, end), blinking-cursor .5s step-end infinite;
+        border-right: .15em solid orange;
+    }
+    .slider > .one > .content > a > .one-button{
+        width: 30%;
+        padding: 1.5%;
+        margin-top: 5rem;
+    }
+    .slider > .two{
+        padding: 16rem 10rem;
+    }
+    .slider > .two > .content {
+        display: flex;
+    }
+}
